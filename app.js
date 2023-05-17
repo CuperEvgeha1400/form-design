@@ -60,6 +60,6 @@ app.listen(3000, () => {
   console.log('Сервер запущен на порту 3000');
 });
 
-app.get('/style.css', function(req, res) {
-  res.sendFile(path.join(__dirname, 'public', 'style.css'));
+app.get('/main.css', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'main.css'));
 });
