@@ -3,24 +3,81 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="main.css" />
+  <script src="/assets/jquery.js"></script>
+  <style>
+    .dropdown ul {
+      display: none;
+    }
+    .dropdown input[type="checkbox"]:checked ~ ul {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <form action="/form" method="POST">
-        <h2>Заголовок формы</h2>
-        <label for="fullName">ФИО:</label>
-        <input type="text" name="fullName" placeholder="ФИО">
-        
-        <label for="address">Адрес:</label>
-        <input type="text" name="address" placeholder="Адрес">
-        
-        <label for="phone">Телефон:</label>
-        <input type="text" name="phone" placeholder="Телефон">
-        
-        <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="Email">
-        
-        <input type="submit" value="Send" class="submit">
-        </form>
+  <div class="login">
+    <form action="/form" class="form" method="POST">
+      <h2>Консолидация</h2>
+
+      <input type="text" name="code" placeholder="Код клиента" required>
+
+      <div class="form-field">
+        <div class="form-field__control">
+          <textarea id="additionalInfo" name="stuff" class="form-field__textarea" placeholder="Товары: трек, название, количество" required></textarea>
+          <div class="form-field__bar"></div>
+        </div>
+      </div> 
+      
+      <input type="text" name="cost" placeholder="Себестоимость товара" required>
+      
+      <input type="text" name="adress" placeholder="Адрес доставки" required>
+      
+      <input type="text" name="name" placeholder="ФИО" required>
+
+      <input type="tel" name="phone" placeholder="Номер телефона" required>
+
+      <input type="text" name="telegram" placeholder="Ник Telegram" required>
+
+      <div class="form-field">
+        <div class="form-field__control">
+          <textarea id="additionalInfo" name="comments" class="form-field__textarea" placeholder="Комментарии"></textarea>
+          <div class="form-field__bar"></div>
+        </div>
+      </div> 
+
+      <div class="dropdown">
+        <input type="checkbox" id="my-dropdown" value="" name="my-checkbox">
+        <label for="my-dropdown">
+          Доставка
+        </label>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="selectOption('Экспресс авто')">Экспресс авто</a></li>
+          <li><a href="javascript:void(0)" onclick="selectOption('Стандарт авто')">Стандарт авто</a></li>
+          <li><a href="javascript:void(0)" onclick="selectOption('Авиа')">Авиа</a></li>
+        </ul>
+      </div>
+
+      <label for="strah">Страховка груза</label>
+      <input class="check" type="checkbox" name="strah">
+
+      <label for="unpack">Убрать упаковку(коробки)</label>
+      <input class="check" type="checkbox" name="unpack">
+
+      <label for="photo">Фото</label>
+      <input class="check" type="checkbox" name="photo">
+
+      <input type="submit" value="Send" class="submit">
+    </form>
+  </div>
+
+  <script>
+    function selectOption(option) {
+      const dropdownCheckbox = document.querySelector('.dropdown input[type="checkbox"]');
+      dropdownCheckbox.checked = false; // Закрываем выпадающий список
+
+      const deliveryLabel = document.querySelector('.dropdown label');
+      deliveryLabel.innerText = option; // Устанавливаем выбранный вариант в метку "Доставка"
+    }
+  </script>
 </body>
 </html>
