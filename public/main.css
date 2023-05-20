@@ -200,3 +200,204 @@ body {
 .dropdown{
   margin-top: 60px;
 }
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  body {
+    background-color: #262424;
+    color:  rgba(255, 255, 255, 0.747) !important;
+  }
+  
+  .login {
+    width: 1000px;   /*  изменим ширину формы */
+    height: 5000px;   /*  изменим высоту формы */
+    border: 1px solid #CCC;
+    background-color: #361a5d;
+    background-size: cover;
+    margin: 30px auto;
+    border-radius: 20px;
+    
+  }
+  .login .form {
+    width: 100%;
+    height: 100%;
+    padding: 15px 25px;
+  }
+  .login .form h2 {
+    color:  rgba(255, 255, 255, 0.747);
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+  .login .form input {
+    width: 100%;
+    height: 70px;   /* размеры полей */
+    margin-top: 30px; /* отсутпы полей */
+    background: rgba(255, 255, 255, 0.747);
+    border: 1px solid rgba(255,255,255,.1);
+    padding: 0 15px;
+    color: #262424;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .login .form input:focus {
+    border: 1px solid rgba(255,255,255,.8);
+    outline: none;
+  }
+  ::-webkit-input-placeholder {
+      color: #4a4747;
+  }
+  .login .form input.submit {
+    background: rgba(255,255,255,.9);
+    color: #262424;
+    font-size: 25px;
+    margin-top: 80px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .form-field__textarea{
+    margin-top: 30px;
+    height: 128px;
+    width: 494px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.747);
+    padding: 15px 15px;
+    border: None;
+    font-size: 17px;
+    resize: none;
+  }
+
+  .form-field__textarea:focus{
+    border: None;
+    
+  }
+
+  .check{
+    height: 20px !important;
+    width: 20px !important;
+  }
+
+
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255,255,255,.8)  ;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: None;
+    text-decoration: none;
+  }
+  
+  .dropdown > input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+  }
+  
+  .dropdown > label,
+  .dropdown > a[role="button"] {
+    display: inline-block;
+    padding: 6px 15px;
+    color: #262424;
+    line-height: 1.5em;
+    text-decoration: none;
+    border: 1px solid #8c8c8c;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+  
+  .dropdown > label:hover,
+  .dropdown > a[role="button"]:hover,
+  .dropdown > a[role="button"]:focus {
+    border-color: #333;
+  }
+  
+  .dropdown > label:after,
+  .dropdown > a[role="button"]:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: 6px;
+  }
+  
+  .dropdown > ul {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    left: -100vw;
+    top: calc(1.5em + 14px);
+    border: 1px solid #8c8c8c;
+    background: #fff;
+    padding: 6px 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 3px 8px rgba(0,0,0,.15);
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
+  }
+  
+  .dropdown > ul a {
+    display: block;
+    padding: 6px 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown > ul a:hover,
+  .dropdown > ul a:focus {
+    background: #ececec;
+  }
+  
+  .dropdown > input[type="checkbox"]:checked ~ ul,
+  .dropdown > ul:target {
+    left: 0;
+  }
+  
+  .dropdown > [type="checkbox"]:checked + label:after,
+  .dropdown > ul:target ~ a:after {
+    content: "\f0d8";
+  }
+  
+  .dropdown a.close {
+    display: none;
+  }
+  
+  .dropdown > ul:target ~ a.close {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-indent: -100vw;
+    z-index: 1000;
+  }
+  
+  
+  /*
+   Demo purposes only
+  */
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  /* body {
+    padding: 30px;
+    color: #333;
+  } */
+  
+  .dropdown{
+    margin-top: 60px;
+  }

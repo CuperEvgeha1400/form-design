@@ -13,6 +13,8 @@
       display: block;
     }
   </style>
+  <script type="text/javascript" src="main.js"></script>
+  <script src="/assets/jquery.js"></script>
 </head>
 <body>
   <div class="login">
@@ -24,6 +26,11 @@
       <div class="form-field">
         <div class="form-field__control">
           <textarea id="additionalInfo" name="stuff" class="form-field__textarea" placeholder="Товары: трек, название, количество" required></textarea>
+      <input required type="text" name="code" placeholder="Код клиента ">
+
+      <div class="form-field">
+        <div class="form-field__control">
+          <textarea required id="additionalInfo" name="stuff" class="form-field__textarea" placeholder="Товары: трек, название, количество"></textarea>
           <div class="form-field__bar"></div>
         </div>
       </div> 
@@ -41,6 +48,23 @@
       <div class="form-field">
         <div class="form-field__control">
           <textarea id="additionalInfo" name="comments" class="form-field__textarea" placeholder="Комментарии"></textarea>
+=======
+      
+      <input required type="text" name="cost" placeholder="Себестоимость товара">
+      
+     
+      <input required type="text" name="adress" placeholder="Адрес доставки">
+      
+      
+      <input required type="text" name="name" placeholder="ФИО">
+
+      <input required type="tel" name="name" placeholder="Номер телефона">
+
+      <input required type="text" name="name" placeholder="Ник Telegram">
+
+      <div class="form-field">
+        <div class="form-field__control">
+          <textarea required id="additionalInfo" name="stuff" class="form-field__textarea" placeholder="Комментарии"></textarea>
           <div class="form-field__bar"></div>
         </div>
       </div> 
@@ -54,6 +78,17 @@
           <li><a href="javascript:void(0)" onclick="selectOption('Экспресс авто')">Экспресс авто</a></li>
           <li><a href="javascript:void(0)" onclick="selectOption('Стандарт авто')">Стандарт авто</a></li>
           <li><a href="javascript:void(0)" onclick="selectOption('Авиа')">Авиа</a></li>
+
+      <div class="dropdown">
+        <input required type="checkbox" id="my-dropdown" value="" name="my-checkbox">
+        <label for="my-dropdown"
+          data-toggle="dropdown">
+        Доставка
+        </label>
+        <ul>
+          <li><a href="#">Экспресс авто</a></li>
+          <li><a href="#">Стандарт авто</a></li>
+          <li><a href="#">Авиа</a></li>
         </ul>
       </div>
 
@@ -79,5 +114,13 @@
       deliveryLabel.innerText = option; // Устанавливаем выбранный вариант в метку "Доставка"
     }
   </script>
+      
+      <input required type="submit" value="Send" class="submit">
+    </form>
+  </div>
+
+
+
+   
 </body>
 </html>
